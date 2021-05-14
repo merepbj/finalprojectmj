@@ -22,6 +22,7 @@ with open("predict_wins.sav", 'rb') as file:
 #     return render_template('index.html')
 
 # Set up the main route
+from sklearn.preprocessing import OrdinalEncoder
 @app.route('/', methods=['GET', 'POST'])
 def main():
     if  flask.request.method == 'GET':
@@ -39,8 +40,10 @@ def main():
                                        columns=['weightClass', 'country', 'age'],
                                        index=['input'])
 
+        enc = OrdinalEncoder()
+        m = enc.fit_transform(input_variables)
         # Get the model's prediction
-        prediction = pickle_model.predict(input_variables)[0]
+        prediction = pickle_model.predict(m)[0]
     
         # Render the form again, but add in the prediction and remind user
         # of the values they input before
