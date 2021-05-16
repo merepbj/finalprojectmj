@@ -2,6 +2,7 @@
 import flask
 # import Flask, render_template, redirect
 import pickle
+from flask.templating import render_template
 import pandas as pd
 
 
@@ -14,8 +15,10 @@ pickle_model = None
 with open("predict_wins.sav", 'rb') as file:
     pickle_model = pickle.load(file)
 
-    print(pickle_model)
-
+    #print(pickle_model)
+@app.route('/about-team')
+def team():
+    return render_template('about.html')
 
 # @app.route('/')
 # def home():
