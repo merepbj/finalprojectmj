@@ -19,6 +19,8 @@
         
         <!-- Navigation-->
 
+        <body background="static/assets/img/MMA.jpg">
+
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,9 +29,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/about-team">About Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Project Design</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/about-team">Country and Weight Class Codes</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Project Design</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -38,8 +40,8 @@
         <header class="masthead">
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">Project Three</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Pick Your Fighter.</h2>
+                    <h1 class="mx-auto my-0 text-uppercase">Pick Your Fighter</h1>
+                    <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5">Project Three</h2> -->
                     <form action="{{ url_for('main') }}" method="POST">
                         <fieldset>
                             <legend>Input values:</legend>
@@ -78,7 +80,7 @@
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">The predicted number of wins...</h4>
+                                    <h2 class="text-white">The predicted number of wins...</h2>
                                     <p class="mb-0 text-white-50">How many wins here. {{ result }}</p>
                                     <hr class="d-none d-lg-block mb-0 mr-0" />
                                 </div>
